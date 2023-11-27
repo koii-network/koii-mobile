@@ -1,4 +1,4 @@
-import {Keypair, PublicKey} from '@solana/web3.js';
+import {Keypair, PublicKey} from '@_koi/web3.js';
 import React, {ReactNode, useEffect, useMemo, useState} from 'react';
 
 export function elipsify(str = '', len = 4) {

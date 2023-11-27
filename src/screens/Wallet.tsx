@@ -1,4 +1,4 @@
-import {LAMPORTS_PER_SOL} from '@solana/web3.js';
+import {LAMPORTS_PER_SOL} from '@_koi/web3.js';
 import React, {useEffect, useState} from 'react';
 import {Button, Text, View} from 'react-native';
 import {AccountSelect, Balance, NetworkSelect, Section} from '../components';
@@ -43,7 +43,7 @@ export const Wallet = () => {
         <View>
           <Section title="Balance">
             {balance ? (
-              <Balance balance={balance} symbol="SOL" decimals={10} />
+              <Balance balance={balance} symbol="KOII" decimals={10} />
             ) : (
               <Text>Fetching balance.</Text>
             )}

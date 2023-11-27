@@ -1,10 +1,8 @@
-import {Cluster, clusterApiUrl, Connection} from '@solana/web3.js';
+import {Cluster, clusterApiUrl, Connection} from '@_koi/web3.js';
 import React, {ReactNode, useEffect, useState} from 'react';
 
 const networks: Network[] = [
-  {id: 'devnet', name: 'Devnet', endpoint: 'devnet'},
-  {id: 'mainnet-beta', name: 'Mainnet Beta', endpoint: 'mainnet-beta'},
-  {id: 'testnet', name: 'Testnet', endpoint: 'testnet'},
+  {id: 'testnet', name: 'Koii Network', endpoint: 'testnet'},
 ];
 
 export interface Network {
@@ -53,7 +51,9 @@ function ConnectionProvider(props: {children: ReactNode}) {
     setNetworkError('');
     setNetworkVersion('');
     setSelectedNetwork(network);
-    setConnection(() => new Connection(clusterApiUrl(network.endpoint)));
+    /*     setConnection(() => new Connection(clusterApiUrl(network.endpoint)));
+     */
+    setConnection(() => new Connection('https://testnet.koii.live'));
   };
 
   const value = {
